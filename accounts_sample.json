@@ -1,0 +1,11 @@
+{
+  "binance": {
+    "api_key": "",
+    "secret": ""
+  },
+  "okx": {
+    "api_key": "",
+    "secret": "",
+    "password": ""
+  }
+}
