@@ -20,7 +20,6 @@ symbol = input("請輸入要執行的交易對\n ex BTC/USDT, ETH/USDT, SOL/USDT
 is_test: int = 0
 while True:
     is_test = int(input("是否為模擬倉 (0:不是, 1:是)："))
-    print(f"is_test:{is_test}")
     if is_test != 0 and is_test != 1:
         print("⚠️請輸入0或1")
     else:
@@ -39,10 +38,10 @@ exchange = exchange_obj({
     "secret": api_secret,
     "password": passphrase,
     "enableRateLimit": True,
-    "options": {"defaultType": "spot", "sandboxMode": True},
+    "options": {"defaultType": "spot"},
 })
 
-exchange.set_sandbox_mode(True)
+exchange.set_sandbox_mode(True if is_test else False)
 market = exchange.load_markets()
 print(market)
 

@@ -1,3 +1,5 @@
 __pycache__/
 accounts.json
 trade_records.txt
+.idea/
+.idea/workspace.xml
